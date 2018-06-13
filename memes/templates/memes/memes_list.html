@@ -1,0 +1,28 @@
+{% for meme in memes_list %}
+
+    <div class=memedisp>
+        <a href="{% url 'memes:detail' meme.id %}" class=memedisp-title>
+            {{ meme.title }}
+        </a>
+        <br>
+
+        <div class=memedisp-author>
+            By:
+            <a href="{% url 'memes:user-memes' meme.author.id %}">
+                {{ meme.author }}
+            </a>
+        </div>
+
+        <div class=memedisp-pub-date>
+            {{ meme.pub_date }}
+        </div>
+        <br>
+
+        <a href="{% url 'memes:detail' meme.id %}">
+            <img src='{{ meme.image.url }}'/>
+        </a>
+        <br>
+    </div>
+    <br>
+
+{% endfor %}

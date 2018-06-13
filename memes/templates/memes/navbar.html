@@ -1,0 +1,18 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'memes/style.css' %}"/>
+
+<div class="navbar">
+    <a href="{% url 'memes:main' %}" class=navbar-button-left>MAIN PAGE</a>
+    <a href="{% url 'memes:top' %}" class=navbar-button-left>Top10</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class=navbar-button-right>Log out</a>
+        <a href="{% url 'memes:meme-add' %}" class=navbar-button-right>Add Meme</a>
+    {% else %}
+        <a href="{% url 'register' %}" class=navbar-button-right>Sign up</a>
+        <a href="{% url 'login' %}" class=navbar-button-right>Log in</a>
+        <a href="{% url 'memes:meme-add' %}" class=navbar-button-right>Add Meme</a>
+    {% endif %}
+
+</div>

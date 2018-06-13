@@ -1,0 +1,59 @@
+{% include 'memes/navbar.html' %}
+
+<div class="main">
+    <center>
+        <div class=memedisp>
+            <a href="{% url 'memes:detail' meme.id %}" class=memedisp-title>
+                {{ meme.title }}
+            </a>
+            <br>
+
+            <div class=memedisp-author>
+                By:
+                <a href="{% url 'memes:user-memes' meme.author.id %}">
+                    {{ meme.author }}
+                </a>
+            </div>
+
+            <div class=memedisp-pub-date>
+                {{ meme.pub_date }}
+            </div>
+            <br>
+
+            <a href="{{ meme.image.url }}">
+                <img src='{{ meme.image.url }}' width="700"/>
+            </a>
+            <br>
+
+            <a href="{% url 'memes:like' meme.id 1 %}">
+                {% if thumb_up == 1 %}
+                    <button type="button" class=likebutton-pressed style="color: green">
+                {% else %}
+                    <button type="button" class=likebutton style="color: green">
+                {% endif %}
+                        &#128077; like {{ meme.get_number_of_likes }}
+                    </button>
+            </a>
+
+            <a href="{% url 'memes:like' meme.id 0 %}">
+                {% if thumb_up == 0 %}
+                    <button type="button" class=likebutton-pressed style="color: rgb(200, 0, 0)">
+                {% else %}
+                    <button type="button" class=likebutton style="color: rgb(200, 0, 0)">
+                {% endif %}
+                        &#128078; dislike {{ meme.get_number_of_dislikes }}
+                    </button>
+            </a>
+
+            <a href="{% url 'memes:detail' next_meme_id %}">
+                <button type="button" class=nextmemebutton>
+                    Next meme
+                </button>
+            </a>
+        </div>
+        <br>
+
+        {% include 'memes/comment_section.html' %}
+
+    </center>
+</div>

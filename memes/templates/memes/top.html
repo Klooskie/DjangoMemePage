@@ -1,0 +1,23 @@
+{% include 'memes/navbar.html' %}
+
+<div class="main">
+    <center>
+        {% if memes_list %}
+
+            {% include 'memes/memes_list.html' %}
+
+            <div style="margin-bottom: 20px">
+                <a href="{% url 'memes:main' %}">
+                    <button class=pagebutton>
+                        Go To Main Page
+                    </button>
+                </a>
+            </div>
+
+        {% else %}
+
+            <div class=form>No memes to show.</div>
+
+        {% endif %}
+    </center>
+</div>

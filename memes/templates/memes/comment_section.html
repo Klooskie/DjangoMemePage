@@ -1,0 +1,43 @@
+<div class=comment-section>
+    <div class=comment-section-title>
+        Comments section
+    </div>
+    {% if request.user.is_authenticated %}
+        <form action="" method="post" enctype="multipart/form-data" class=comment-section-add>
+
+            {% csrf_token %}
+
+            {% include 'memes/form_template.html' %}
+
+            <div style="margin-top: 5px;">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    {% else %}
+        <div class=comment-section-not-logged>
+            You must be logged in to leave a comment
+        </div>
+    {% endif %}
+</div>
+
+{% for comment in comments %}
+    <div class=comment>
+
+        <div class=comment-header>
+            <a href="{% url 'memes:user-memes' comment.author.id %}">
+                {{ comment.author }}
+            </a>
+        </div>
+
+        <div class=comment-content>
+            {{ comment }}
+        </div>
+
+        <div class=comment-pub-date>
+            published: {{comment.pub_date}}
+        </div>
+
+    </div>
+    <br>
+{% endfor %}

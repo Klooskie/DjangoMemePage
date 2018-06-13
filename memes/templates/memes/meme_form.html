@@ -1,0 +1,21 @@
+{% include 'memes/navbar.html' %}
+
+<div class="form">
+    <center>
+        <h1>Adding meme</h1>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            {% include 'memes/form_template.html' %}
+
+            <div style="margin-top: 20px;">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </center>
+</div>

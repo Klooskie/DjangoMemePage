@@ -1,0 +1,41 @@
+{% include 'memes/navbar.html' %}
+
+<div class="welcome">
+    <center>
+        <h1>Welcome to my meme page</h1>
+        <br>
+        <div>
+            <a href="{% url 'memes:main' %}" style="text-decoration: none">
+                <button class=pagebutton>
+                    Main Page
+                </button>
+            </a>
+            <br>
+            <a href="{% url 'memes:top' %}" style="text-decoration: none">
+                <button class=pagebutton>
+                    Top 10
+                </button>
+            </a>
+            <br>
+            {% if newest_meme != -1 %}
+                <a href="{% url 'memes:detail' newest_meme %}" style="text-decoration: none">
+                    <button class=pagebutton>
+                        Newest Meme
+                    </button>
+                </a>
+                <br>
+            {% endif %}
+            <a href="{% url 'login' %}" style="text-decoration: none">
+                <button class=pagebutton>
+                    Log In
+                </button>
+            </a>
+            <br>
+            <a href="{% url 'register' %}" style="text-decoration: none">
+                <button class=pagebutton>
+                    Sign Up
+                </button>
+            </a>
+        </div>
+    </center>
+</div>

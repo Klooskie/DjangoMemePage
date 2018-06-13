@@ -1,0 +1,55 @@
+{% include 'memes/navbar.html' %}
+
+<div class="main">
+    <center>
+        {% if memes_list %}
+
+            {% include 'memes/memes_list.html' %}
+
+            <div class=pagination>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">
+                        <button class=pagebutton>
+                            Next Page
+                        </button>
+                    </a>
+                {% else %}
+                    <a href="?page=1">
+                        <button class=pagebutton>
+                            Back To 1st Page
+                        </button>
+                    </a>
+                {% endif %}
+
+                <br>
+                <a href="?page=1">&laquo;</a>
+
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+                {% else %}
+                    <a href="?page=1">&lsaquo;</a>
+                {% endif %}
+
+                <span>
+                    ({{ page_obj.number }}/{{ page_obj.paginator.num_pages }})
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+                {% else %}
+                    <a href="?page={{ page_obj.number }}">&rsaquo;</a>
+                {% endif %}
+
+                <a href="?page={{ paginator.num_pages }}">&raquo;</a>
+
+            </div>
+
+        {% else %}
+
+            <div class=form>No memes to show.</div>
+
+        {% endif %}
+
+    </center>
+</div>

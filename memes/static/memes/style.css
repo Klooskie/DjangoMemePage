@@ -1,0 +1,228 @@
+.navbar {
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-button-left {
+    float: left;
+    display: block;
+    color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-button-right {
+    float: right;
+    display: block;
+    color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: rgb(240, 240, 240);
+    color: black;
+}
+
+
+.form {
+    margin-top: 80px;
+    font-size: 110%;
+    font-family: "Arial"
+}
+
+.welcome {
+    margin-top: 110px;
+    font-size: 110%;
+    font-family: "Arial"
+}
+
+.usermemes-title {
+    margin-top: 70px; 
+    font-size: 110%; 
+    font-family: "Arial";
+    margin-bottom: -60px
+}
+
+.main {
+    margin-top: 15px;
+    font-size: 130%;
+}
+
+.pagination {
+    margin-bottom: 20px;
+}
+
+.pagination a {
+    margin-top: 30px;
+    color: black;
+    font-size: 140%;
+    text-decoration: none;
+}
+
+
+.memedisp {
+    margin-top: 65px;
+    padding: 7px 2px;
+    text-align: left; 
+    text-decoration: none;
+    display: inline-block;
+    width: "700";
+}
+
+.memedisp-title {
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+    font-size: 150%;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.memedisp-author {
+    padding: 2px 10px;
+    float: left;
+}
+
+.memedisp-author a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.memedisp-pub-date {
+    padding: 2px 10px;
+    float: right;
+}
+
+.memedisp img {
+    margin-top: 2px;
+    margin-bottom: 7px;
+    float: right;
+    width: 700px;
+    border-radius: 4px;
+}
+
+.memedisp img:hover {
+    box-shadow: 0 0 2px 2px rgba(141, 21, 21, 0.712);
+}
+
+.likebutton {
+    float: left;
+    width: 15%;
+    height: 40px;
+    margin-top: 3px;
+    font-size: 70%;
+    border-radius: 20px;
+}
+
+.likebutton-pressed {
+    border: 2px solid;
+    background-color: rgb(225, 225, 225);
+    outline: none;
+    float: left;
+    width: 15%;
+    height: 40px;
+    margin-top: 3px;
+    font-size: 70%;
+    border-radius: 20px;
+}
+
+.nextmemebutton {
+    float: right;
+    width: 69%;
+    height: 40px;
+    margin-top: 3px;
+    color: rgb(84, 84, 84);
+    font-size: 20;
+    border-radius: 20px;
+}
+
+
+.comment-section {
+    margin-top: 50px;
+    text-align: left;
+    width: 700;
+    color: black;
+    font-family: "Arial"
+}
+
+.comment-section-title {
+    font-size: 130%;
+    margin-left: 10px;
+}
+
+.comment-section-add {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.comment-section-not-logged {
+    color: rgb(60, 60, 60);
+    padding: 20px 20px;
+    margin-bottom: 10px
+}
+
+.comment {
+    background-color: rgb(221, 221, 221);
+    margin-top: 1px;
+    text-align: left; 
+    text-decoration: none;
+    display: inline-block;
+    width: 695;
+    font-family: "Arial";
+}
+
+.comment-header {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: left; 
+    text-decoration: none;
+}
+
+.comment-header a {
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+.comment-content {
+    color: rgb(60, 60, 60);
+    padding: 10px 13px;
+    text-align: left; 
+    text-decoration: none;
+    width: 100%;
+    word-wrap: break-word;
+    max-width: 97%;
+}
+
+.comment-pub-date {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    color: black;
+    font-size: 75%;
+    text-align: left; 
+    text-decoration: none;
+}
+
+
+.pagebutton {
+    margin-top: 40px;
+    color: rgb(84, 84, 84);
+    font-size: 30;
+    width: 600px;
+    border-radius: 20px;
+}
+
+body {
+    background: rgb(196, 196, 196);
+}
+

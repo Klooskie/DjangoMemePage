@@ -1,0 +1,23 @@
+{% include 'memes/navbar.html' %}
+
+<div class="form">
+    <center>
+        <h1>{{ title }}</h1>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div style="color:red;">
+                {{ form.non_field_errors.as_text }}
+            </div>
+
+            {% include 'memes/form_template.html' %}
+
+            <div style="margin-top: 20px;">
+                <button type="submit">{{ title }}</button>
+            </div>
+
+        </form>
+    </center>
+</div>
